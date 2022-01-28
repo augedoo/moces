@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply font-mulish;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-zilla;
+	}
+
+	button {
+		-webkit-tap-highlight-color: transparent;
+	}
+}
+
+// Config
+@import './variables';
+@import './mixins';
+
+// Library Overrides
+@import './lib';
+
+// Components
+@import './components';
+
+// Pages
+@import './pages/home';
+
+.mobile_menu_item {
+	&--active {
+		@apply text-primary-500 before:from-primary-500 before:to-transparent before:w-full before:h-[1px] before:bg-gradient-to-r before:absolute before:bottom-0 before:left-0;
+	}
+
+	&--inactive {
+		@apply text-gray-100 before:from-white before:to-transparent before:w-full before:h-[1px] before:bg-gradient-to-r before:absolute before:bottom-0 before:left-0;
+	}
+}

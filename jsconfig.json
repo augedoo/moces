@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "@/assets/*": ["assets/*"],
+      "@/components/*": ["components/*"],
+      "@/styles/*": ["styles/*"],
+      "@/data/*": ["data/*"],
+      "@/config/*": ["config/*"],
+      "@/store/*": ["store/*"],
+      "@/helpers/*": ["helpers/*"],
+      "@/utils/*": ["utils/*"],
+      "@/pages/*": ["pages/*"]
+    }
+  }, 
+  "exclude": ["node_modules", ".next"]
+}
