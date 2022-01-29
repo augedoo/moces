@@ -1,7 +1,3 @@
-$primary-color: #0055ff;
-$secondary-color: #00cc99;
-$primary-alt-color: #3399fe;
-
 // Tailwind breakpoints
 $sm: '640px';
 // => @media (min-width: 640px) { ... }
@@ -17,3 +13,6 @@ $xl: '1280px';
 
 $xxl: '1536px';
 // => @media (min-width: 1536px) { ... }
+
+// Website Width
+$website-width: '1440px';

@@ -1,0 +1,12 @@
+// Mobile Navigation Menu
+.mobile-menu {
+	&__nav__item {
+		&--active {
+			@apply text-primary-500 before:from-primary-500 before:to-transparent before:w-full before:h-[1px] before:bg-gradient-to-r before:absolute before:bottom-0 before:left-0;
+		}
+
+		&--inactive {
+			@apply text-gray-100 before:from-white before:to-transparent before:w-full before:h-[1px] before:bg-gradient-to-r before:absolute before:bottom-0 before:left-0;
+		}
+	}
+}

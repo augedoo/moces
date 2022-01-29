@@ -42,8 +42,8 @@ const MobileNavMenu = ({ isMenuShown, toggleMobileMenu }) => {
 			<li
 				className={`relative w-full py-6 transition duration-300 uppercase ${
 					router.pathname === link.route
-						? 'mobile_menu_item--active'
-						: 'mobile_menu_item--inactive'
+						? 'mobile-menu__nav__item--active'
+						: 'mobile-menu__nav__item--inactive'
 				}`}
 				key={index}
 			>
@@ -55,11 +55,11 @@ const MobileNavMenu = ({ isMenuShown, toggleMobileMenu }) => {
 
 	return (
 		<div
-			className={`mobile__menu overflow-y-auto overflow-x-hidden fixed right-0 inset-y-0 z-[100] w-[280px] bg-secondary-700 border-l-4 border-primary-500 h-screen transform transition duration-700 ${
+			className={`mobile-menu overflow-y-auto overflow-x-hidden fixed right-0 inset-y-0 z-[100] w-[280px] bg-secondary-700 border-l-4 border-primary-500 h-screen transform transition duration-700 ${
 				isMenuShown ? 'translate-x-[0px]' : 'translate-x-[280px]'
 			}`}
 		>
-			<div className='w-full p-4 mobile__menu__wrapper'>
+			<div className='w-full p-4 mobile-menu__wrapper'>
 				<div className='flex items-center pt-2 pb-5 space-x-4 header__logo'>
 					<div className='w-12 h-12 bg-secondary-800/30'></div>
 					<h1 className='text-3xl font-bold tracking-wider text-gray-200 uppercase'>
@@ -67,7 +67,7 @@ const MobileNavMenu = ({ isMenuShown, toggleMobileMenu }) => {
 					</h1>
 				</div>
 
-				<ul className='w-full mobile__menu__nav'>{renderNavLinks(navLinks)}</ul>
+				<ul className='w-full mobile-menu__nav'>{renderNavLinks(navLinks)}</ul>
 
 				<Button
 					url='#/donate'
@@ -77,7 +77,7 @@ const MobileNavMenu = ({ isMenuShown, toggleMobileMenu }) => {
 					className='mt-10 text-gray-100 sm:hidden'
 				/>
 
-				<ul className='flex items-center mt-10 space-x-4 mobile__menu__sm'>
+				<ul className='flex items-center mt-10 space-x-4 mobile-menu__sm'>
 					<li className='flex items-center justify-center w-10 h-10 bg-secondary-800/30'>
 						<a href='#http://' target='_blank' rel='noopener noreferrer'>
 							<img src={facebook} alt='facebook' className='w-5 h-5' />

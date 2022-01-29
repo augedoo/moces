@@ -1,0 +1,273 @@
+// Tailwind container custom positioning classes
+.amt {
+	&-container {
+		max-width: $website-width;
+
+		&-padding {
+			@include lg {
+				&-left {
+					padding-left: theme('container.padding.lg');
+				}
+				&-right {
+					padding-right: theme('container.padding.lg');
+				}
+			}
+		}
+
+		&-margin {
+			@include lg {
+				&-left {
+					margin-left: theme('container.padding.lg');
+				}
+				&-right {
+					margin-right: theme('container.padding.lg');
+				}
+			}
+			@include xl {
+				&-left {
+					margin-left: theme('container.padding.xl');
+				}
+				&-right {
+					margin-right: theme('container.padding.xl');
+				}
+			}
+			@include xxl {
+				&-left {
+					margin-left: theme('container.padding.2xl');
+				}
+				&-right {
+					margin-right: theme('container.padding.2xl');
+				}
+			}
+		}
+	}
+
+	&-content {
+		&-padded {
+			&-right {
+				@include lg {
+					padding-left: calc(
+						((100vw - theme('screens.lg')) / 2) +
+							(theme('container.padding.lg'))
+					);
+				}
+
+				@include xl {
+					padding-left: calc(
+						((100vw - theme('screens.xl')) / 2) +
+							(theme('container.padding.xl'))
+					);
+				}
+
+				@include xxl {
+					padding-left: calc(
+						((100vw - theme('screens.2xl')) / 2) +
+							(theme('container.padding.2xl'))
+					);
+				}
+			}
+
+			&-left {
+				@include lg {
+					padding-right: calc(
+						((100vw - theme('screens.lg')) / 2) +
+							(theme('container.padding.lg'))
+					);
+				}
+
+				@include xl {
+					padding-right: calc(
+						((100vw - theme('screens.xl')) / 2) +
+							(theme('container.padding.xl'))
+					);
+				}
+
+				@include xxl {
+					padding-right: calc(
+						((100vw - theme('screens.2xl')) / 2) +
+							(theme('container.padding.2xl'))
+					);
+				}
+			}
+		}
+
+		&-aligned {
+			&-right {
+				@include lg {
+					margin-left: calc(
+						((100vw - theme('screens.lg')) / 2) +
+							(theme('container.padding.lg'))
+					);
+				}
+
+				@include xl {
+					margin-left: calc(
+						((100vw - theme('screens.xl')) / 2) +
+							(theme('container.padding.xl'))
+					);
+				}
+
+				@include xxl {
+					margin-left: calc(
+						((100vw - theme('screens.2xl')) / 2) +
+							(theme('container.padding.2xl'))
+					);
+				}
+			}
+
+			&-left {
+				@include lg {
+					margin-right: calc(
+						((100vw - theme('screens.lg')) / 2) +
+							(theme('container.padding.lg'))
+					);
+				}
+
+				@include xl {
+					margin-right: calc(
+						((100vw - theme('screens.xl')) / 2) +
+							(theme('container.padding.xl'))
+					);
+				}
+
+				@include xxl {
+					margin-right: calc(
+						((100vw - theme('screens.2xl')) / 2) +
+							(theme('container.padding.2xl'))
+					);
+				}
+			}
+		}
+
+		&-positioned {
+			&-right {
+				@include lg {
+					right: calc(
+						((100vw - theme('screens.lg')) / 2) +
+							(theme('container.padding.lg'))
+					);
+				}
+
+				@include xl {
+					right: calc(
+						((100vw - theme('screens.xl')) / 2) +
+							(theme('container.padding.xl'))
+					);
+				}
+
+				@include xxl {
+					right: calc(
+						((100vw - theme('screens.2xl')) / 2) +
+							(theme('container.padding.2xl'))
+					);
+				}
+			}
+
+			&-left {
+				@include lg {
+					left: calc(
+						((100vw - theme('screens.lg')) / 2) +
+							(theme('container.padding.lg'))
+					);
+				}
+
+				@include xl {
+					left: calc(
+						((100vw - theme('screens.xl')) / 2) +
+							(theme('container.padding.xl'))
+					);
+				}
+
+				@include xxl {
+					left: calc(
+						((100vw - theme('screens.2xl')) / 2) +
+							(theme('container.padding.2xl'))
+					);
+				}
+			}
+		}
+	}
+
+	&-container-padding {
+		&-left {
+			@include lg {
+				left: theme('container.padding.lg');
+			}
+			@include xl {
+				left: theme('container.padding.xl');
+			}
+			@include xxl {
+				left: theme('container.padding.2xl');
+			}
+		}
+
+		&-left-2x {
+			@include lg {
+				left: calc(theme('container.padding.lg') * 2);
+			}
+			@include xl {
+				left: calc(theme('container.padding.xl') * 2);
+			}
+			@include xxl {
+				left: calc(theme('container.padding.2xl') * 2);
+			}
+		}
+	}
+
+	&-flex {
+		&-row {
+			@apply flex-row;
+
+			&-reverse {
+				@apply flex-row-reverse;
+			}
+		}
+
+		&-col {
+			@apply flex-col;
+
+			&-reverse {
+				@apply flex-col-reverse;
+			}
+		}
+	}
+
+	&-items {
+		&-start {
+			@apply items-start;
+		}
+		&-center {
+			@apply items-center;
+		}
+		&-end {
+			@apply items-end;
+		}
+	}
+
+	&-justify {
+		&-end {
+			@apply justify-end;
+		}
+		&-center {
+			@apply justify-center;
+		}
+		&-start {
+			@apply justify-start;
+		}
+	}
+
+	&-text {
+		&-left {
+			text-align: left;
+		}
+		&-right {
+			text-align: right;
+		}
+	}
+
+	&-gap {
+		&-0 {
+			gap: 0;
+		}
+	}
+}

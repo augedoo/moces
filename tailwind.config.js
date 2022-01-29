@@ -51,6 +51,16 @@ module.exports = {
 			5: '5',
 		},
 
+		container: {
+			padding: {
+				DEFAULT: '1rem',
+				md: '2rem',
+				lg: '4rem',
+				xl: '6rem',
+				'2xl': '8rem',
+			},
+		},
+
 		animation: {
 			pulse: 'pulse 1s linear infinite alternate',
 		},
@@ -67,25 +77,26 @@ module.exports = {
 		},
 
 		screens: {
-			sm: '641px',
+			sm: '640px',
 			// => @media (min-width: 640px) { ... }
 
-			md: '769px',
+			md: '768px',
 			// => @media (min-width: 768px) { ... }
 
-			lg: '1025px',
+			lg: '1024px',
 			// => @media (min-width: 1024px) { ... }
 
-			xl: '1281px',
+			xl: '1280px',
 			// => @media (min-width: 1280px) { ... }
 
-			'2xl': '1537px',
+			'2xl': '1536px',
 			// => @media (min-width: 1536px) { ... }
 		},
 	},
 	variants: {
 		extend: {},
 	},
+
 	plugins: [
 		plugin(function ({ addUtilities, theme, e }) {
 			const rotateUtilities = _.map(theme('line-clamp'), (value, key) => {

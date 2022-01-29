@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import Head from 'next/head';
 
-import MainNavigation from '../components/layout/MainNavigation/index';
+import Showcase from '@/components/home/Showcase';
 
 export default function Home() {
 	return (
@@ -10,7 +10,11 @@ export default function Home() {
 				<title>MOCES | Humanitarian Support for the Elderly and the Sick</title>
 			</Head>
 
-			<div className='w-screen h-[70vh] bg-red-400'></div>
+			<main>
+				<section>
+					<Showcase />
+				</section>
+			</main>
 		</Fragment>
 	);
 }

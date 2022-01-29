@@ -1,0 +1,48 @@
+:root {
+	--swiper-theme-color: theme(colors.primary.500);
+}
+
+.showcase {
+	.swiper {
+		&-pagination {
+			@apply pb-5;
+
+			&-horizontal {
+				@extend .amt-content-aligned-right;
+				@apply lg:flex lg:justify-start;
+			}
+
+			&-bullet {
+				@apply w-6 h-1 rounded-none bg-white opacity-60;
+			}
+			&-bullet-active {
+				@apply bg-primary-500 opacity-100;
+			}
+		}
+
+		&-button-prev,
+		&-button-next {
+			@apply sm:mx-[3.5%];
+
+			&::after {
+				@apply text-[24px] lg:text-[28px] font-black;
+			}
+
+			img {
+				@apply w-full h-full absolute transition duration-300;
+			}
+
+			&:hover {
+				img {
+					&:nth-child(2) {
+						@apply opacity-0;
+					}
+				}
+			}
+		}
+
+		&-button-next {
+			@apply lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:right-0 lg:-mx-[5%];
+		}
+	}
+}

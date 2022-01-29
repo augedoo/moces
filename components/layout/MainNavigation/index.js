@@ -55,7 +55,7 @@ const MainNavigation = ({ isMenuShown, toggleMobileMenu }) => {
 
 	return (
 		<header className='header shadow h-[95px]'>
-			<ContainerLayout className='h-full mx-auto flex items-center gap-4 lg:justify-between header__wrapper'>
+			<ContainerLayout className='flex items-center h-full gap-4 mx-auto lg:justify-between header__wrapper'>
 				<div className='flex items-center space-x-4 header__logo'>
 					<div className='w-12 h-12 bg-secondary-100'></div>
 					<h1 className='text-3xl font-bold tracking-wider uppercase text-secondary-700'>
@@ -67,10 +67,10 @@ const MainNavigation = ({ isMenuShown, toggleMobileMenu }) => {
 				<Button
 					type='button'
 					onClick={(e) => toggleMobileMenu(e)}
-					className={`flex items-center justify-center transition duration-200 ml-auto border rounded-full sm:opacity-90 sm:fixed lg:hidden sm:bottom-[5%] sm:right-[5%] w-28 h-11 ${
+					className={`flex items-center justify-center group transition duration-200 ml-auto border rounded-full sm:opacity-90 sm:fixed sm:z-[1000] lg:hidden sm:bottom-[5%] flex-row-reverse sm:right-[5%] w-28 h-11 ${
 						isMenuShown
-							? '!bg-primary-50 text-primary-700 border-primary-200'
-							: 'text-secondary-700 border-secondary-200 !bg-secondary-50'
+							? '!bg-primary-50 text-primary-700 border-primary-200 hover:text-secondary-700 hover:border-secondary-200 hover:!bg-secondary-50'
+							: 'text-secondary-700 border-secondary-200 !bg-secondary-50 hover:!bg-primary-50 hover:text-primary-700 hover:border-primary-200'
 					} `}
 				>
 					<span
@@ -86,8 +86,8 @@ const MainNavigation = ({ isMenuShown, toggleMobileMenu }) => {
 				</Button>
 
 				{/* Desktop Nav Links */}
-				<div className='hidden header__nav lg:block h-full'>
-					<ul className='flex items-center space-x-4 font-bold text-sm h-full uppercase'>
+				<div className='hidden h-full header__nav lg:block'>
+					<ul className='flex items-center h-full space-x-4 text-sm font-bold uppercase'>
 						{renderNavLinks(navLinks)}
 					</ul>
 				</div>

@@ -1,5 +1,10 @@
 import { useState } from 'react';
 
+// import 'swiper/css';
+// import 'swiper/css/autoplay';
+// import 'swiper/css/pagination';
+// import 'swiper/css/navigation';
+import 'swiper/css/bundle';
 import '../styles/globals.scss';
 import MainNavigation from '@/components/layout/MainNavigation';
 import MobileNavMenu from '@/components/layout/MainNavigation/MobileNavMenu';

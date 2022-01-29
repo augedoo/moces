@@ -1,0 +1,43 @@
+// Showcase
+.showcase {
+	// Showcase Animation
+	.swiper-slide {
+		h1,
+		p,
+		a,
+		button {
+			@apply opacity-0 duration-[0.9s];
+		}
+
+		&-prev,
+		&-next {
+			h1 {
+				@apply -translate-y-[20px];
+			}
+			p {
+				@apply translate-y-[20px];
+			}
+			a,
+			button {
+				@apply translate-y-[20px];
+			}
+		}
+
+		&-active {
+			h1,
+			p,
+			a,
+			button {
+				@apply translate-y-0 delay-[0.9s] opacity-100;
+			}
+
+			p {
+				@apply delay-[1.1s];
+			}
+			a,
+			button {
+				@apply delay-[1.3s];
+			}
+		}
+	}
+}
