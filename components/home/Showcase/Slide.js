@@ -39,7 +39,7 @@ const Slide = ({ slideData: { headline, supportingInfo } }) => {
 						url='#/donate'
 						type='nextLink'
 						textContent='Start creating impact here'
-						bgClassName='bg-primary-500 hover:!bg-primary-700'
+						bgClassName='bg-primary-500 hover:bg-primary-700'
 						className='mt-8 text-gray-100 sm:block w-5/6 max-w-xs !flex lg:mt-12'
 					>
 						<CgArrowLongRight className='w-7 h-7' />
