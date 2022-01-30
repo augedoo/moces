@@ -67,7 +67,7 @@ const MainNavigation = ({ isMenuShown, toggleMobileMenu }) => {
 				<Button
 					type='button'
 					onClick={(e) => toggleMobileMenu(e)}
-					className={`flex items-center justify-center group transition duration-200 ml-auto border rounded-full sm:opacity-90 sm:fixed sm:z-[1000] lg:hidden sm:bottom-[5%] flex-row-reverse sm:right-[5%] w-28 h-11 ${
+					className={`flex items-center justify-center group transition duration-200 ml-auto border rounded-full sm:opacity-90 sm:fixed sm:z-[1000] lg:hidden sm:bottom-[2.5%] flex-row-reverse sm:right-[0%] sm:-rotate-90 w-28 h-11 ${
 						isMenuShown
 							? '!bg-primary-50 text-primary-700 border-primary-200 hover:text-secondary-700 hover:border-secondary-200 hover:!bg-secondary-50'
 							: 'text-secondary-700 border-secondary-200 !bg-secondary-50 hover:!bg-primary-50 hover:text-primary-700 hover:border-primary-200'
@@ -97,7 +97,7 @@ const MainNavigation = ({ isMenuShown, toggleMobileMenu }) => {
 					url='#/donate'
 					type='nextLink'
 					textContent='Donate'
-					bgClassName='bg-primary-500'
+					bgClassName='bg-primary-500 hover:bg-primary-600'
 					className='hidden text-gray-100 sm:block sm:ml-auto lg:ml-0'
 				/>
 			</ContainerLayout>

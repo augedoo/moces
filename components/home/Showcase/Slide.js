@@ -1,4 +1,4 @@
-import { MdOutlineArrowRightAlt } from 'react-icons/md';
+import { CgArrowLongRight } from 'react-icons/cg';
 
 import Button from '@/components/ui/Button';
 import ContainerLayout from '@/components/layout/ContainerLayout';
@@ -39,10 +39,10 @@ const Slide = ({ slideData: { headline, supportingInfo } }) => {
 						url='#/donate'
 						type='nextLink'
 						textContent='Start creating impact here'
-						bgClassName='bg-primary-500'
+						bgClassName='bg-primary-500 hover:!bg-primary-700'
 						className='mt-8 text-gray-100 sm:block w-5/6 max-w-xs !flex lg:mt-12'
 					>
-						<MdOutlineArrowRightAlt className='w-7 h-7' />
+						<CgArrowLongRight className='w-7 h-7' />
 					</Button>
 				</div>
 			</div>

@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 import showcase_swiper_nav_btn from '@/assets/images/showcase-swiper-pagination-btn.png';
 import showcase_swiper_nav_btn_hovered from '@/assets/images/showcase-swiper-pagination-btn-hovered.png';
 import Slide from './Slide';
+import QuickDonation from '@/components/donation/QuickDonation';
 
 Swiper.use([Autoplay, Navigation, Pagination]);
 
@@ -59,6 +60,12 @@ const Showcase = () => {
 
 	return (
 		<div className='showcase min-h-[500px] bg-red-50 relative amt-content-aligned-left'>
+			{/* Quick Donation */}
+			<div className='absolute z-20 right-0 -bottom-[15%] lg:block hidden'>
+				<QuickDonation />
+			</div>
+
+			{/* Swiper */}
 			<div className='showcase-swiper swiper relative h-[550px] lg:h-[600px]'>
 				<div className='swiper-wrapper'>{renderSlides(slides)}</div>
 			</div>
