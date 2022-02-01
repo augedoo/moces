@@ -3,6 +3,8 @@ import Head from 'next/head';
 
 import Showcase from '@/components/home/Showcase';
 import QuickDonation from '@/components/donation/QuickDonation';
+import Values from '@/components/home/Values';
+import About from '@/components/home/About';
 
 export default function Home() {
 	return (
@@ -20,6 +22,16 @@ export default function Home() {
 				{/* Fast donation for mobile */}
 				<section className='mt-10 mb-10 lg:hidden'>
 					<QuickDonation />
+				</section>
+
+				{/* Values */}
+				<section className='mt-16'>
+					<Values />
+				</section>
+
+				{/* About */}
+				<section className='mt-16'>
+					<About />
 				</section>
 			</main>
 		</Fragment>

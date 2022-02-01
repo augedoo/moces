@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+	* {
+		@apply selection:bg-secondary-500 selection:text-white;
+	}
+
 	body {
 		@apply font-mulish;
 	}
