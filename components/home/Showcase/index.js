@@ -36,7 +36,7 @@ const Showcase = () => {
 				slidesPerView: 1,
 				grabCursor: true,
 				loop: true,
-				spaceBetween: 10,
+				spaceBetween: 6,
 				autoplay: {
 					delay: 2000,
 				},

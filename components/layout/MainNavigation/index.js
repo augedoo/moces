@@ -63,11 +63,12 @@ const MainNavigation = ({ isMenuShown, toggleMobileMenu }) => {
 					</h1>
 				</div>
 
+				{/* // Todo: Fix positioning */}
 				{/* Mobile Side Menu Toggler */}
 				<Button
 					type='button'
 					onClick={(e) => toggleMobileMenu(e)}
-					className={`flex items-center justify-center group transition duration-200 ml-auto border rounded-full sm:opacity-90 sm:fixed sm:z-[1000] lg:hidden sm:bottom-[2.5%] flex-row-reverse sm:right-[0%] sm:-rotate-90 w-28 h-11 ${
+					className={`flex items-center justify-center group transition duration-200 ml-auto border rounded-full sm:opacity-90 sm:fixed sm:z-[1000] lg:hidden sm:top-[87vh] flex-row-reverse sm:right-[0%] sm:-rotate-90 w-28 h-11 ${
 						isMenuShown
 							? '!bg-primary-50 text-primary-700 border-primary-200 hover:text-secondary-700 hover:border-secondary-200 hover:!bg-secondary-50'
 							: 'text-secondary-700 border-secondary-200 !bg-secondary-50 hover:!bg-primary-50 hover:text-primary-700 hover:border-primary-200'
