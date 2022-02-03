@@ -39,9 +39,7 @@ const About = () => {
 			if (index == 1)
 				return (
 					<div className='items-center justify-center hidden w-full h-full p-2 lg:flex'>
-						<h1 className='text-4xl font-black text-center capitalize lg:text-5xl text-secondary-900 lg:text-left'>
-							About Us
-						</h1>
+						<h1 className='section-header lg:!block'>About Us</h1>
 					</div>
 				);
 
@@ -73,12 +71,10 @@ const About = () => {
 		});
 
 	return (
-		<div className='lg:py-14 div'>
-			<h1 className='text-4xl font-black text-center capitalize lg:hidden lg:text-5xl text-secondary-900 lg:text-left'>
-				About Us
-			</h1>
+		<div className='lg:pt-14'>
+			<h1 className='section-header lg:hidden'>About Us</h1>
 
-			<ContainerLayout className='!w-full lg:!container lg:grid-cols-12 lg:mx-auto xl:gap-16 lg:grid lg:gap-8 '>
+			<ContainerLayout className='!w-full content-center lg:!container lg:grid-cols-12 lg:mx-auto xl:gap-16 lg:grid lg:gap-8 '>
 				{/* Intro Video */}
 				<div className='order-2 pt-8 lg:pt-0 lg:col-span-5 lg:flex lg:flex-col lg:justify-center lg:items-end'>
 					<AboutVideo />
@@ -89,7 +85,7 @@ const About = () => {
 							type='nextLink'
 							textContent='Learn More About Us'
 							bgClassName='bg-secondary-700 hover:bg-secondary-500'
-							className='mt-6 text-secondary-50'
+							className='mt-10 text-secondary-50'
 						>
 							<CgArrowLongRight className='w-7 h-7' />
 						</Button>
@@ -101,7 +97,6 @@ const About = () => {
 					<div className='flex flex-col flex-wrap gap-4 mt-8 lg:mt-0 sm:flex-row lg:grid lg:grid-cols-2 lg:gap-0'>
 						{renderCards(about)}
 					</div>
-					<div className='grid gap-4 pt-8 sm:grid-cols-2 xl:grid-cols-4'></div>
 				</ContainerLayout>
 			</ContainerLayout>
 		</div>

@@ -5,6 +5,7 @@ import Showcase from '@/components/home/Showcase';
 import QuickDonation from '@/components/donation/QuickDonation';
 import Values from '@/components/home/Values';
 import About from '@/components/home/About';
+import Projects from '@/components/home/Projects';
 
 export default function Home() {
 	return (
@@ -13,7 +14,7 @@ export default function Home() {
 				<title>MOCES | Humanitarian Support for the Elderly and the Sick</title>
 			</Head>
 
-			<main>
+			<main className='home'>
 				{/* Showcase */}
 				<section>
 					<Showcase />
@@ -32,6 +33,11 @@ export default function Home() {
 				{/* About */}
 				<section className='mt-16'>
 					<About />
+				</section>
+
+				{/* Projects */}
+				<section className='mt-16'>
+					<Projects />
 				</section>
 			</main>
 		</Fragment>

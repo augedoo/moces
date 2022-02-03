@@ -2,47 +2,86 @@
 	--swiper-theme-color: theme(colors.primary.500);
 }
 
-.showcase {
-	.swiper {
-		&-pagination {
-			@apply pb-5;
+.home {
+	.showcase {
+		// Swiper
+		.swiper {
+			&-pagination {
+				@apply pb-5;
 
-			&-horizontal {
-				@extend .amt-content-aligned-right;
-				@apply lg:flex lg:justify-start;
+				&-horizontal {
+					@extend .amt-content-aligned-right;
+					@apply lg:flex lg:justify-start;
+				}
+
+				&-bullet {
+					@apply w-6 h-1 rounded-none bg-white opacity-60;
+				}
+				&-bullet-active {
+					@apply bg-primary-500 opacity-100;
+				}
 			}
 
-			&-bullet {
-				@apply w-6 h-1 rounded-none bg-white opacity-60;
-			}
-			&-bullet-active {
-				@apply bg-primary-500 opacity-100;
-			}
-		}
+			&-button-prev,
+			&-button-next {
+				@apply sm:mx-[3.5%];
 
-		&-button-prev,
-		&-button-next {
-			@apply sm:mx-[3.5%];
+				&::after {
+					@apply text-[24px] lg:text-[28px] font-black;
+				}
 
-			&::after {
-				@apply text-[24px] lg:text-[28px] font-black;
-			}
-
-			img {
-				@apply w-full h-full absolute transition duration-300;
-			}
-
-			&:hover {
 				img {
-					&:nth-child(2) {
-						@apply opacity-0;
+					@apply w-full h-full absolute transition duration-300;
+				}
+
+				&:hover {
+					img {
+						&:nth-child(2) {
+							@apply opacity-0;
+						}
 					}
 				}
 			}
-		}
 
-		&-button-next {
-			@apply lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:right-0 lg:-mx-[5%];
+			&-button-next {
+				@apply lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:right-0 lg:-mx-[5%];
+			}
+		}
+	}
+
+	.projects {
+		// Swiper
+		.swiper {
+			// @apply overflow-visible;
+
+			&-button-prev {
+				@apply translate-x-[50%] lg:translate-x-0;
+			}
+
+			&-button-prev,
+			&-button-next {
+				@apply w-[40px] h-[40px] lg:mx-[0%] -translate-y-32 lg:translate-y-0;
+
+				&::after {
+					@apply hidden;
+				}
+
+				svg {
+					@apply hidden lg:block w-16 h-16;
+				}
+
+				img {
+					@apply w-full h-full absolute lg:hidden transition duration-300;
+				}
+
+				&:hover {
+					img {
+						&:nth-child(2) {
+							@apply opacity-0;
+						}
+					}
+				}
+			}
 		}
 	}
 }

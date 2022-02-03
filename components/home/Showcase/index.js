@@ -1,8 +1,6 @@
 import Swiper, { Autoplay, Navigation, Pagination } from 'swiper';
 import { useEffect, useRef } from 'react';
 
-import showcase_swiper_nav_btn from '@/assets/images/showcase-swiper-pagination-btn.png';
-import showcase_swiper_nav_btn_hovered from '@/assets/images/showcase-swiper-pagination-btn-hovered.png';
 import Slide from './Slide';
 import QuickDonation from '@/components/donation/QuickDonation';
 
@@ -71,14 +69,8 @@ const Showcase = () => {
 			</div>
 
 			{/* Swiper Navigation */}
-			<div className='showcase-swiper__button-prev swiper-button-prev'>
-				{/* <img src={showcase_swiper_nav_btn_hovered} />
-				<img src={showcase_swiper_nav_btn} /> */}
-			</div>
-			<div className='showcase-swiper__button-next swiper-button-next'>
-				{/* <img src={showcase_swiper_nav_btn_hovered} className='-scale-x-[1]' />
-				<img src={showcase_swiper_nav_btn} className='-scale-x-[1]' /> */}
-			</div>
+			<div className='showcase-swiper__button-prev swiper-button-prev'></div>
+			<div className='showcase-swiper__button-next swiper-button-next'></div>
 
 			{/* Swiper Pagination */}
 			<div className='showcase-swiper__pagination swiper-pagination swiper-pagination-dots'></div>

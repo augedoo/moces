@@ -4,11 +4,14 @@ import moces_ceo from '@/assets/images/moces_ceo.jpg';
 
 import ContainerLayout from '@/components/layout/ContainerLayout';
 import Button from '@/components/ui/Button';
+import OutlineOffset from '@/components/ui/OutlineOffset';
 
 const AboutVideo = () => {
 	return (
 		<Fragment>
 			<ContainerLayout className='h-[450px] lg:h-[500px] xl:h-[550px] min-w-[95%] lg:!px-0 sm:min-w-0 sm:mx-auto relative bg-gray-400'>
+				<OutlineOffset />
+
 				{/* Background Image */}
 				<img
 					src={moces_ceo}

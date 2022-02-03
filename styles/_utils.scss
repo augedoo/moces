@@ -1,3 +1,9 @@
+.section {
+	&-header {
+		@apply text-4xl font-black text-center capitalize lg:text-5xl text-secondary-900 lg:text-left;
+	}
+}
+
 // Tailwind container custom positioning classes
 .amt {
 	&-container {

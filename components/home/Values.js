@@ -30,7 +30,7 @@ const Values = () => {
 		items.map((item, index) => (
 			<div
 				key={index}
-				className='shadow border px-4 py-3 flex gap-4 lg:gap-4 lg:py-6 lg:px-3 2xl:p-5'
+				className='flex gap-4 px-4 py-3 border shadow lg:gap-4 lg:py-6 lg:px-3 2xl:p-5'
 			>
 				{/* Icon */}
 				<div className='w-[40px] h-[40px] min-w-[40px] lg:w-[60px] lg:min-w-[60px] lg:h-[60px] text-3xl lg:text-4xl flex items-center text-primary-500 relative justify-center bg-primary-50 border '>
@@ -41,18 +41,16 @@ const Values = () => {
 					/>
 				</div>
 
-				<p className='font-light w-full'>{item.text}</p>
+				<p className='w-full font-light'>{item.text}</p>
 			</div>
 		));
 
 	return (
 		<ContainerLayout className='mx-auto'>
-			<h1 className='text-4xl lg:text-5xl font-black text-secondary-900 lg:text-left text-center capitalize'>
-				Your Impact
-			</h1>
+			<h1 className='section-header'>Your Impact</h1>
 
 			{/* Card */}
-			<div className='grid pt-8 gap-4 sm:grid-cols-2 xl:grid-cols-4'>
+			<div className='grid gap-4 pt-8 sm:grid-cols-2 xl:grid-cols-4'>
 				{renderItems(values)}
 			</div>
 		</ContainerLayout>
