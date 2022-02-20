@@ -16,19 +16,20 @@ const QuickDonation = () => {
 			<OutlineOffset />
 
 			{/* Form */}
-			<form className='flex flex-col sm:items-center lg:items-start w-full h-full'>
-				<h2 className='font-black text-gray-700 text-2xl'>
+			<form className='flex flex-col w-full h-full sm:items-center lg:items-start'>
+				<h2 className='text-2xl font-black text-gray-700'>
 					Pledge your support today.
 				</h2>
 
-				<p className='font-medium py-1 text-gray-800 text-lg'>
+				<p className='py-1 text-lg font-medium text-gray-800'>
 					Help us do more.
 				</p>
 
 				{/* Options */}
-				<div className='flex items-center gap-1 gap-y-2 mt-6 flex-wrap'>
+				<div className='flex flex-wrap items-center gap-1 mt-6 gap-y-2'>
 					{amountOptions.map((amount, index) => (
 						<button
+							key={index}
 							onClick={() => setActiveAmount(amount)}
 							index={index}
 							type='button'

@@ -38,13 +38,17 @@ const About = () => {
 			// Render section heading on large screens
 			if (index == 1)
 				return (
-					<div className='items-center justify-center hidden w-full h-full p-2 lg:flex'>
+					<div
+						key={index}
+						className='items-center justify-center hidden w-full h-full p-2 lg:flex'
+					>
 						<h1 className='section-header lg:!block'>About Us</h1>
 					</div>
 				);
 
 			// Render empty blocks to create shape on large screens
-			if (!item.title) return <div className='hidden lg:block'></div>;
+			if (!item.title)
+				return <div key={index} className='hidden lg:block'></div>;
 
 			return (
 				// Card/Box

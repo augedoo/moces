@@ -6,6 +6,7 @@ import QuickDonation from '@/components/donation/QuickDonation';
 import Values from '@/components/home/Values';
 import About from '@/components/home/About';
 import Projects from '@/components/home/Projects';
+import News from '@/components/home/News';
 
 export default function Home() {
 	return (
@@ -38,6 +39,11 @@ export default function Home() {
 				{/* Projects */}
 				<section className='mt-16'>
 					<Projects />
+				</section>
+
+				{/* News */}
+				<section className='mt-16 mb-10'>
+					<News />
 				</section>
 			</main>
 		</Fragment>

@@ -49,7 +49,8 @@
 		}
 	}
 
-	.projects {
+	.projects,
+	.news {
 		// Swiper
 		.swiper {
 			// @apply overflow-visible;
@@ -81,6 +82,19 @@
 						}
 					}
 				}
+			}
+		}
+	}
+
+	.news {
+		.swiper {
+			&-button-prev {
+				@apply translate-x-[0%] lg:translate-x-0;
+			}
+
+			&-button-next,
+			&-button-prev {
+				@apply -translate-y-[6.5rem];
 			}
 		}
 	}

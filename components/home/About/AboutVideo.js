@@ -32,14 +32,15 @@ const AboutVideo = () => {
 				</Button>
 
 				<div className='absolute inset-0 z-10 flex items-end justify-center w-full h-full bg-gradient-to-t from-secondary-700/50 to-secondary-700/10'>
-					<p className='justify-end p-10 text-center text-gray-100'>
+					<div className='justify-end p-10 text-center text-gray-100'>
 						<span className='text-base font-normal uppercase'>
 							Listen to the CEO
 						</span>
+
 						<h3 className='text-xl font-bold capitalize'>
 							Mr. Godlove Egyawan
 						</h3>
-					</p>
+					</div>
 				</div>
 			</ContainerLayout>
 
