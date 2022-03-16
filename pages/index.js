@@ -7,6 +7,7 @@ import Values from '@/components/home/Values';
 import About from '@/components/home/About';
 import Projects from '@/components/home/Projects';
 import News from '@/components/home/News';
+import Causes from '@/components/home/Causes';
 
 export default function Home() {
 	return (
@@ -44,6 +45,11 @@ export default function Home() {
 				{/* News */}
 				<section className='mt-16 mb-10'>
 					<News />
+				</section>
+
+				{/* Causes */}
+				<section className='mt-16'>
+					<Causes />
 				</section>
 			</main>
 		</Fragment>

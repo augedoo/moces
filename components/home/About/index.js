@@ -98,7 +98,7 @@ const About = () => {
 
 				{/* Boxes */}
 				<ContainerLayout className='order-1 mx-auto lg:col-span-7 lg:!px-0 lg:!w-full'>
-					<div className='flex flex-col flex-wrap gap-4 mt-8 lg:mt-0 sm:flex-row lg:grid lg:grid-cols-2 lg:gap-0'>
+					<div className='flex flex-col flex-wrap gap-4 mt-8 lg:mt-0 sm:flex-col lg:grid lg:grid-cols-2 lg:gap-0'>
 						{renderCards(about)}
 					</div>
 				</ContainerLayout>
