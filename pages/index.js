@@ -8,6 +8,7 @@ import About from '@/components/home/About';
 import Projects from '@/components/home/Projects';
 import News from '@/components/home/News';
 import Causes from '@/components/home/Causes';
+import Motivation from '@/components/home/Motivation';
 
 export default function Home() {
 	return (
@@ -43,13 +44,18 @@ export default function Home() {
 				</section>
 
 				{/* Causes */}
-				<section className=''>
+				<section>
 					<Causes />
 				</section>
 
 				{/* News */}
 				<section className='mt-16 mb-10'>
 					<News />
+				</section>
+
+				{/* Motivation Banner */}
+				<section className='mt-28'>
+					<Motivation />
 				</section>
 			</main>
 		</Fragment>
