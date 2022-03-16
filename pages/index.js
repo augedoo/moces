@@ -42,14 +42,14 @@ export default function Home() {
 					<Projects />
 				</section>
 
+				{/* Causes */}
+				<section className=''>
+					<Causes />
+				</section>
+
 				{/* News */}
 				<section className='mt-16 mb-10'>
 					<News />
-				</section>
-
-				{/* Causes */}
-				<section className='mt-16'>
-					<Causes />
 				</section>
 			</main>
 		</Fragment>

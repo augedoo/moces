@@ -51,7 +51,9 @@ const Causes = () => {
 			return (
 				<div
 					key={index}
-					className='flex flex-col flex-1 w-full px-4 py-4 border border-white sm:min-w-[240px] 2xl:px-6'
+					className={`flex flex-col flex-1 w-full px-4 py-4 border border-white sm:min-w-[240px] 2xl:px-6 ${
+						index === 4 && 'lg:-mt-10 lg:-ml-[1px]'
+					} ${index === 2 && ' lg:-ml-[2px]'}`}
 				>
 					<h3 className='pb-4 mb-3 text-2xl font-semibold border-b border-white text-gray-50'>
 						{title}

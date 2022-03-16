@@ -72,7 +72,7 @@ const Projects = () => {
 		});
 
 	return (
-		<div className='relative py-10 projects'>
+		<div className='relative py-10 pb-14 projects'>
 			{/* Orange Bg */}
 			<div className='bg-primary-500 bg-opacity-[0.15] w-full h-full absolute inset-0 -z-10 lg:w-[70vw] lg:right-0 lg:left-auto lg:inset-y-0'></div>
 
