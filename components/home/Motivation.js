@@ -3,7 +3,7 @@ import Button from '../ui/Button';
 
 const Motivation = () => {
 	return (
-		<div className='banner h-[350px] sm:w-[90%] mx-auto lg:mx-0 lg:w-auto mb-10 amt-content-padded-left'>
+		<div className='banner h-[350px] sm:w-[90%] mx-auto lg:mx-0 lg:w-auto mb-10 amt-content-padded-left amt-content-padded-right'>
 			<div className='relative h-full '>
 				<div className='relative z-10 w-full h-full overflow-hidden'>
 					{/* Overlay */}
@@ -16,7 +16,7 @@ const Motivation = () => {
 					/>
 				</div>
 
-				<div className='absolute inset-x-0 inset-y-0 z-20 flex flex-col items-center justify-center h-full gap-4 text-white transform lg:left-auto lg:right-0 lg:items-end lg:translate-x-[50px]  xl:translate-x-1/3 lg:text-secondary-600'>
+				<div className='absolute inset-x-0 inset-y-0 z-20 flex flex-col items-center justify-center h-full gap-4 text-white '>
 					<h1 className='max-w-xs pb-10 mx-auto text-4xl font-bold text-center lg:max-w-none'>
 						Together we can Do more{' '}
 					</h1>
