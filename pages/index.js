@@ -9,6 +9,7 @@ import Projects from '@/components/home/Projects';
 import News from '@/components/home/News';
 import Causes from '@/components/home/Causes';
 import Motivation from '@/components/home/Motivation';
+import Inspiration from '@/components/home/Inspiration';
 
 export default function Home() {
 	return (
@@ -54,8 +55,13 @@ export default function Home() {
 				</section>
 
 				{/* Motivation Banner */}
-				<section className='mt-28'>
+				<section className='mt-24'>
 					<Motivation />
+				</section>
+
+				{/* Inspiration */}
+				<section className='mt-20'>
+					<Inspiration />
 				</section>
 			</main>
 		</Fragment>

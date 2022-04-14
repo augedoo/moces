@@ -7,34 +7,7 @@ import { useRouter } from 'next/router';
 import Button from '@/components/ui/Button';
 import ContainerLayout from '../ContainerLayout';
 
-const MainNavigation = ({ isMenuShown, toggleMobileMenu }) => {
-	const navLinks = [
-		{
-			text: 'Home',
-			route: '/',
-		},
-		{
-			text: 'About',
-			route: '/about',
-		},
-		{
-			text: 'Project',
-			route: '/project',
-		},
-		{
-			text: 'News',
-			route: '/news',
-		},
-		{
-			text: 'Inspiration',
-			route: '/inspiration',
-		},
-		{
-			text: 'Contact',
-			route: '/contact',
-		},
-	];
-
+const MainNavigation = ({ navLinks, isMenuShown, toggleMobileMenu }) => {
 	const router = useRouter();
 
 	const renderNavLinks = (links) =>

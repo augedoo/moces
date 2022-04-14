@@ -7,34 +7,7 @@ import twitter from '@/assets/images/twitter.png';
 import youtube from '@/assets/images/youtube.png';
 import Button from '@/components/ui/Button';
 
-const MobileNavMenu = ({ isMenuShown, toggleMobileMenu }) => {
-	const navLinks = [
-		{
-			text: 'Home',
-			route: '/',
-		},
-		{
-			text: 'About',
-			route: '/about',
-		},
-		{
-			text: 'Project',
-			route: '/project',
-		},
-		{
-			text: 'News',
-			route: '/news',
-		},
-		{
-			text: 'Inspiration',
-			route: '/inspiration',
-		},
-		{
-			text: 'Contact',
-			route: '/contact',
-		},
-	];
-
+const MobileNavMenu = ({ navLinks, isMenuShown, toggleMobileMenu }) => {
 	const router = useRouter();
 
 	const renderNavLinks = (links) =>

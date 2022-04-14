@@ -1,4 +1,5 @@
 import { CgArrowLongRight } from 'react-icons/cg';
+
 import Button from '@/components/ui/Button';
 import ContainerLayout from '@/components/layout/ContainerLayout';
 import world_map from '@/assets/images/wold_map_light_bg.png';

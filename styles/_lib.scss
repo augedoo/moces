@@ -50,7 +50,8 @@
 	}
 
 	.projects,
-	.news {
+	.news,
+  .inspiration {
 		// Swiper
 		.swiper {
 			// @apply overflow-visible;
@@ -95,6 +96,19 @@
 			&-button-next,
 			&-button-prev {
 				@apply -translate-y-[6.5rem];
+			}
+		}
+	}
+
+	.inspiration {
+		.swiper {
+			&-button-prev {
+				@apply translate-x-[0%] lg:translate-x-0;
+			}
+
+			&-button-next,
+			&-button-prev {
+				@apply hidden lg:block;
 			}
 		}
 	}

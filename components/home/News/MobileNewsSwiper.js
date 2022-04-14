@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper';
+import SwiperCore, { Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import showcase_swiper_nav_btn from '@/assets/images/showcase-swiper-pagination-btn.png';
@@ -7,6 +7,8 @@ import showcase_swiper_nav_btn_hovered from '@/assets/images/showcase-swiper-pag
 import Slide from './Slide';
 import { IoChevronBackOutline, IoChevronForwardOutline } from 'react-icons/io5';
 import { latestReleases } from '@/data/articles';
+
+SwiperCore.use([Autoplay]);
 
 const MobileNewsSlider = () => {
 	const prevRef = useRef(null);

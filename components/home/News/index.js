@@ -46,6 +46,7 @@ const News = () => {
 								className='hidden w-full text-sm text-center text-gray-100 lg:ml-0 lg:block'
 							/>
 						</div>
+
 						<NewsCard article={latestReleases[2]} />
 					</div>
 
