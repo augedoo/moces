@@ -4,6 +4,12 @@
 	}
 }
 
+.heading {
+  &-2 {
+    @apply text-2xl font-black text-center capitalize text-secondary-700 lg:text-left;
+  }
+}
+
 // Tailwind container custom positioning classes
 .amt {
 	&-container {

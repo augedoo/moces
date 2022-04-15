@@ -4,7 +4,7 @@ import { CgArrowLongRight } from 'react-icons/cg';
 import OutlineOffset from '@/components/ui/OutlineOffset';
 import Button from '@/components/ui/Button';
 
-const QuickDonation = () => {
+const QuickDonation = ({ onlyInputAmount }) => {
 	const [activeAmount, setActiveAmount] = useState(null);
 
 	const amountOptions = [5, 10, 20];
@@ -16,7 +16,7 @@ const QuickDonation = () => {
 			<OutlineOffset />
 
 			{/* Form */}
-			<form className='flex flex-col w-full h-full sm:items-center lg:items-start'>
+			<form className='flex flex-col w-full h-full text-center sm:items-center lg:items-start lg:text-left'>
 				<h2 className='text-2xl font-black text-gray-700'>
 					Pledge your support today.
 				</h2>
@@ -26,7 +26,11 @@ const QuickDonation = () => {
 				</p>
 
 				{/* Options */}
-				<div className='flex flex-wrap items-center gap-1 mt-6 gap-y-2'>
+				<div
+					className={`flex flex-wrap items-center gap-1 mt-6 gap-y-2 ${
+						onlyInputAmount && 'w-full sm:w-[75%] lg:w-full'
+					}`}
+				>
 					{amountOptions.map((amount, index) => (
 						<button
 							key={index}
@@ -37,23 +41,26 @@ const QuickDonation = () => {
 								activeAmount === amount
 									? 'bg-primary-500 !border-primary-500  text-white'
 									: 'bg-transparent text-secondary-700'
-							}`}
+							} ${onlyInputAmount && 'hidden'}`}
 						>
 							<span className='text-xs font-light'>{currency}</span> {amount}
 						</button>
 					))}
 
 					{/* Amount Input */}
-					<div className='flex items-center group flex-1 min-w-[120px] group h-12 relative'>
+					<div
+						className={`flex items-center group flex-1 min-w-[120px] group h-12 relative w-full`}
+					>
 						<span className='text-xs font-light absolute w-[40px] h-full bg-secondary-700 group-focus-within:bg-primary-500 flex items-center justify-center text-white'>
 							{currency}
 						</span>
+
 						<input
 							onClick={() => setActiveAmount(null)}
 							type='number'
 							step={1}
 							placeholder='Amt'
-							className='h-full w-full bg-transparent font-semibold outline-none pl-[45px] border-secondary-700 focus:border-primary-500 border'
+							className={`h-full w-full bg-transparent font-semibold outline-none pl-[45px] border-secondary-700 focus:border-primary-500 border`}
 						/>
 					</div>
 				</div>
@@ -63,7 +70,9 @@ const QuickDonation = () => {
 					type='submit'
 					textContent='Select Payment Method'
 					bgClassName='bg-secondary-700 hover:bg-secondary-500'
-					className='mt-5 text-secondary-50'
+					className={`mt-5 text-white ${
+						onlyInputAmount && 'w-full sm:w-[75%] lg:w-full !bg-primary-500'
+					}`}
 				>
 					<CgArrowLongRight className='w-7 h-7' />
 				</Button>

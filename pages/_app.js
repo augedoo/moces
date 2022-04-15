@@ -18,7 +18,7 @@ const navLinks = [
 	},
 	{
 		text: 'Projects',
-		route: '/project',
+		route: '/projects',
 	},
 	{
 		text: 'News',

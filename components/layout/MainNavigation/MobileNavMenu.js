@@ -20,7 +20,7 @@ const MobileNavMenu = ({ navLinks, isMenuShown, toggleMobileMenu }) => {
 				}`}
 				key={index}
 			>
-				<Link href={`#${link.route}`}>
+				<Link href={`${link.route}`}>
 					<a className=''>{link.text}</a>
 				</Link>
 			</li>
@@ -43,7 +43,7 @@ const MobileNavMenu = ({ navLinks, isMenuShown, toggleMobileMenu }) => {
 				<ul className='w-full mobile-menu__nav'>{renderNavLinks(navLinks)}</ul>
 
 				<Button
-					url='#/donate'
+					url='/donation'
 					type='nextLink'
 					textContent='Donate'
 					bgClassName='bg-primary-500'
