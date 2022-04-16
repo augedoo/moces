@@ -47,7 +47,7 @@ const MobileNavMenu = ({ navLinks, isMenuShown, toggleMobileMenu }) => {
 					type='nextLink'
 					textContent='Donate'
 					bgClassName='bg-primary-500'
-					className='mt-10 text-gray-100 sm:hidden'
+					className='mt-10 text-gray-100 lg:hidden'
 				/>
 
 				<ul className='flex items-center mt-10 space-x-4 mobile-menu__sm'>
