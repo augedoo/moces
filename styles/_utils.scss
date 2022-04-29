@@ -8,6 +8,14 @@
   &-2 {
     @apply text-2xl font-black text-center capitalize text-secondary-700 lg:text-left;
   }
+
+  &-3 {
+    @apply text-xl font-black text-center capitalize text-secondary-700 lg:text-left;
+  }
+
+  &-4 {
+    @apply text-lg font-black text-center capitalize text-secondary-700 lg:text-left;
+  }
 }
 
 // Tailwind container custom positioning classes
