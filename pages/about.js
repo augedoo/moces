@@ -18,7 +18,7 @@ const About = () => {
 				<WhatWeRepresent />
 			</section>
 
-			<section className='my-16 lg:mb-40 lg:my-24' id='about-vision'>
+			<section className='my-16 lg:my-28' id='about-vision'>
 				<Vision />
 			</section>
 		</div>

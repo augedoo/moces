@@ -100,25 +100,9 @@ module.exports = {
 		extend: {},
 	},
 
-	plugins: [
-		plugin(function ({ addUtilities, theme, e }) {
-			const rotateUtilities = _.map(theme('line-clamp'), (value, key) => {
-				return {
-					[`.${e(`line-clamp-${key}`)}`]: {
-						display: '-webkit-box',
-						['-webkit-line-clamp']: `${value}`,
-						['-webkit-box-orient']: 'vertical',
-						overflow: 'hidden',
-						['text-overflow']: 'ellipsis',
-					},
-					'.card-shadow': {
-						'box-shadow':
-							'0 7px 14px 0 rgba(59,65,94,.1),0 3px 6px 0 rgba(0,0,0,.07)',
-					},
-				};
-			});
 
-			addUtilities(rotateUtilities);
-		}),
-	],
+	plugins: [
+    require('@tailwindcss/line-clamp'), 
+    require('prettier-plugin-tailwindcss')
+  ],
 };

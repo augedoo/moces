@@ -72,9 +72,9 @@ const Projects = () => {
 		});
 
 	return (
-		<div className='relative py-10 pb-14 projects'>
+		<div className='relative py-10 projects pb-14'>
 			{/* Orange Bg */}
-			<div className='bg-primary-500 bg-opacity-[0.15] w-full h-full absolute inset-0 -z-10 lg:w-[70vw] lg:right-0 lg:left-auto lg:inset-y-0'></div>
+			<div className='absolute inset-0 -z-10 h-full w-full bg-primary-500 bg-opacity-[0.15] lg:inset-y-0 lg:right-0 lg:left-auto lg:w-[70vw]'></div>
 
 			{/* Title */}
 			<ContainerLayout className='lg:mx-auto'>
@@ -82,7 +82,7 @@ const Projects = () => {
 			</ContainerLayout>
 
 			{/* Swiper */}
-			<div className='h-[600px] w-full mt-8 projects__list'>
+			<div className='projects__list mt-8 h-[600px] w-full'>
 				<Swiper
 					spaceBetween={25}
 					slidesPerView={1}

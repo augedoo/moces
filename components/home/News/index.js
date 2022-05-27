@@ -2,7 +2,7 @@ import ContainerLayout from '@/components/layout/ContainerLayout';
 import MobileNewsSwiper from './MobileNewsSwiper';
 import NewsCardLarge from './NewsCardLarge';
 import NewsCard from './NewsCard';
-import { latestReleases } from '@/data/articles';
+import latestReleases from '@/assets/data/articles';
 import Button from '@/components/ui/Button';
 
 const News = () => {
@@ -20,9 +20,9 @@ const News = () => {
 				<h1 className='section-header lg:hidden'>Latest News</h1>
 
 				<div className='pt-8'>
-					<div className='grid grid-cols-2 gap-4 lg:grid-cols-4 gap-y-7'>
-						<div className='col-span-2 sm:h-[380px] lg:h-[480px] flex flex-col'>
-							{/* Most Recent Artlcle */}
+					<div className='grid grid-cols-2 gap-4 gap-y-7 lg:grid-cols-4'>
+						<div className='col-span-2 flex flex-col sm:h-[380px] lg:h-[480px]'>
+							{/* Most Recent Article */}
 							<h1 className='mb-4 section-header sm:hidden lg:block'>
 								Latest News
 							</h1>
@@ -57,7 +57,7 @@ const News = () => {
 							type='nextLink'
 							textContent='View All News'
 							bgClassName='bg-primary-500 hover:bg-primary-600'
-							className='text-sm text-center text-gray-100 w-fit lg:hidden sm:mx-auto lg:ml-0'
+							className='text-sm text-center text-gray-100 w-fit sm:mx-auto lg:ml-0 lg:hidden'
 						/>
 					</div>
 				</div>

@@ -120,35 +120,18 @@
       
 		  &-button-next,
 			&-button-prev {
-        @apply h-10 w-10 lg:w-12 lg:h-12 -mt-28 lg:-mt-8;
+        @apply h-10 w-10 lg:w-12 lg:h-12 lg:-mt-8;
 
         img:first-child, &::after {
           @apply hidden;
         }        
 			}
 
-      @include lg {
-        &-button-next,
-        &-button-prev {
-          @apply transform -mt-28 lg:-mt-8;
-
-          img, svg {
-          @apply hidden;
-          }
-  
-          &::after{
-            @apply inline-block text-3xl font-black;
-          }
-        }
-        
-        &-button-prev::after {
-          @apply  lg:-translate-x-[70px];
-        }
-        &-button-next::after {
-          @apply  lg:translate-x-[70px];
-        }
+      &-button-next {
+        @apply right-6;
       }
-		}
+
+     }
 	}
 
 }

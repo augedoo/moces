@@ -5,6 +5,7 @@ import DonationHeader from '@/components/donation/DonationHeader';
 import Causes from '@/components/donation/Causes';
 import CurrentProject from '@/components/projects/CurrentProject';
 import DonationValues from '@/components/donation/DonationValues';
+import projects from '@/assets/data/projects';
 
 const Donation = () => {
 	return (
@@ -23,7 +24,13 @@ const Donation = () => {
 			</section>
 
 			<section className='mt-16 lg:mt-24'>
-				<CurrentProject />
+				<h1 className='section-header lg:!text-center'>Project Support</h1>
+
+				<p className='max-w-xs py-2 mx-auto text-center sm:max-w-md'>
+					Donate with intent. Support our current project
+				</p>
+
+				<CurrentProject project={projects[0]} />
 			</section>
 
 			<section className='mt-16 lg:mt-24'>

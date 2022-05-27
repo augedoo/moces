@@ -6,7 +6,7 @@ import showcase_swiper_nav_btn from '@/assets/images/showcase-swiper-pagination-
 import showcase_swiper_nav_btn_hovered from '@/assets/images/showcase-swiper-pagination-btn-hovered.png';
 import Slide from './Slide';
 import { IoChevronBackOutline, IoChevronForwardOutline } from 'react-icons/io5';
-import { latestReleases } from '@/data/articles';
+import latestReleases from '@/assets/data/articles';
 
 SwiperCore.use([Autoplay]);
 
