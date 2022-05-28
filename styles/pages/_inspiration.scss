@@ -2,63 +2,42 @@
   .gallery {
     .event-images {      
       img {
-        @apply w-full h-full object-cover;        
-
         &:nth-child(1n) {grid-area: pic1}
         &:nth-child(2n) {grid-area: pic2}
         &:nth-child(3n) {grid-area: pic3}
         &:nth-child(4n) {grid-area: pic4}
         &:nth-child(5n) {grid-area: pic5}
       }
-      
-      @include sm {
-  @apply gap-4 grid-cols-3;
-}
 
-@include lg {
-  height: 650px;
-  width: 100%;
-  grid-template-areas: 
-    "pic1 pic2"
-    "pic1 pic3";
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 0.4fr 0.6fr;
-}
-      
-    } 
+      &-3 {
+        grid-template-areas: 
+        "pic1 pic2"
+        "pic1 pic3";
+        grid-template-columns: 0.4fr 0.6fr; 
+      }
+      &-4 {
+        grid-template-areas: 
+          "pic1 pic1 pic1 pic2 pic2"
+          "pic3 pic3 pic4 pic4 pic4";
+        grid-template-columns: repeat(5,1fr);
+      }
+      &-5 {
+        grid-template-areas: 
+          "pic1 pic1 pic2"
+          "pic1 pic1 pic2"
+          "pic3 pic4 pic2"
+          "pic3 pic4 pic5"
+          "pic3 pic4 pic5";
+        grid-template-columns: repeat(3,1fr);
+      }
+      &.swiper-slide {
+        opacity: 0 !important;
+      }
+
+      &.swiper-slide-active {
+        opacity: 1 !important;
+      }
+    }
   }
 }
 
-// * Three images
-// @include sm {
-//   @apply gap-4 grid-cols-3;
-// }
-
-// @include lg {
-//   height: 650px;
-//   width: 100%;
-//   grid-template-areas: 
-//     "pic1 pic1"
-//     "pic2 pic3";
-//   grid-template-rows: 1fr 1fr;
-//   grid-template-columns: 0.6fr 0.4fr;
-// }
-
-// * Four images
-// @include sm {
-//   height: 600px;
-//   width: 100%;
-//   grid-template-areas: 
-//     "pic1 pic2"
-//     "pic3 pic4";
-//   grid-template-columns: repeat(2,1fr);
-// }
-
-// @include lg {
-//   height: 700px;
-//   width: 100%;
-//   grid-template-areas: 
-//     "pic1 pic1 pic1 pic2 pic2"
-//     "pic3 pic3 pic4 pic4 pic4";
-//   grid-template-columns: repeat(5,1fr);
-// }

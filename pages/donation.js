@@ -18,7 +18,7 @@ const Donation = () => {
 
 			<section>
 				<Header
-					title='About Us'
+					title='General Donations'
 					imageSmall='https://unsplash.it/502'
 					imageLarge='https://unsplash.it/701'
 					description='General donations are used for organizational upkeep. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam animi qui laudantium fugiat at rem facere maiores atque'
@@ -37,7 +37,7 @@ const Donation = () => {
 			<section className='mt-16 lg:mt-24'>
 				<h1 className='section-header lg:!text-center'>Project Support</h1>
 
-				<p className='max-w-xs py-2 mx-auto text-center sm:max-w-md'>
+				<p className='mx-auto max-w-xs py-2 text-center sm:max-w-md'>
 					Donate with intent. Support our current project
 				</p>
 
