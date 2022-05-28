@@ -13,10 +13,10 @@ const MainNavigation = ({ navLinks, isMenuShown, toggleMobileMenu }) => {
 	const renderNavLinks = (links) =>
 		links.map((link, index) => (
 			<li
-				className={`h-full border-b-4 flex items-center hover:text-primary-500 transition duration-300 ${
+				className={`flex h-full items-center border-b-4 transition duration-300 hover:text-primary-500 ${
 					router.pathname === link.route
-						? ' text-primary-500 border-primary-500'
-						: 'text-secondary-900/80 border-transparent'
+						? ' border-primary-500 text-primary-500'
+						: 'border-transparent text-secondary-900/80'
 				}`}
 				key={index}
 			>
@@ -27,33 +27,37 @@ const MainNavigation = ({ navLinks, isMenuShown, toggleMobileMenu }) => {
 		));
 
 	return (
-		<header className='header shadow h-[95px]'>
-			<ContainerLayout className='flex items-center h-full gap-4 mx-auto lg:justify-between header__wrapper'>
-				<div className='flex items-center space-x-4 header__logo'>
-					<div className='w-12 h-12 bg-secondary-100'></div>
-					<h1 className='text-3xl font-bold tracking-wider uppercase text-secondary-700'>
-						Moces
-					</h1>
-				</div>
+		<header className='header h-[95px] shadow'>
+			<ContainerLayout className='flex items-center h-full gap-4 mx-auto header__wrapper lg:justify-between'>
+				<Link href={'/'}>
+					<a className='block'>
+						<div className='flex items-center space-x-4 header__logo'>
+							<div className='w-12 h-12 bg-secondary-100'></div>
+							<h1 className='text-3xl font-bold tracking-wider uppercase text-secondary-700'>
+								Moces
+							</h1>
+						</div>
+					</a>
+				</Link>
 
 				{/* // Todo: Fix positioning */}
 				{/* Mobile Side Menu Toggler */}
 				<Button
 					type='button'
 					onClick={(e) => toggleMobileMenu(e)}
-					className={`flex items-center justify-center group transition duration-200 ml-auto border rounded-full file:lg:hidden lg:hidden flex-row-reverse w-28 h-11 ${
+					className={`group ml-auto flex h-11 w-28 flex-row-reverse items-center justify-center rounded-full border transition duration-200 lg:hidden file:lg:hidden ${
 						isMenuShown
-							? '!bg-primary-50 text-primary-700 border-primary-200 hover:text-secondary-700 hover:border-secondary-200 hover:!bg-secondary-50'
-							: 'text-secondary-700 border-secondary-200 !bg-secondary-50 hover:!bg-primary-50 hover:text-primary-700 hover:border-primary-200'
+							? 'border-primary-200 !bg-primary-50 text-primary-700 hover:border-secondary-200 hover:!bg-secondary-50 hover:text-secondary-700'
+							: 'border-secondary-200 !bg-secondary-50 text-secondary-700 hover:border-primary-200 hover:!bg-primary-50 hover:text-primary-700'
 					} `}
 				>
 					<span
 						className={`transition duration-200 ${isMenuShown && 'rotate-180'}`}
 					>
 						{!isMenuShown ? (
-							<HiOutlineMenuAlt2 className='w-7 h-7' />
+							<HiOutlineMenuAlt2 className='h-7 w-7' />
 						) : (
-							<CgClose className='w-7 h-7' />
+							<CgClose className='h-7 w-7' />
 						)}
 					</span>
 					<span className='font-bold'>Menu</span>
@@ -73,7 +77,7 @@ const MainNavigation = ({ navLinks, isMenuShown, toggleMobileMenu }) => {
 						type='nextLink'
 						textContent='Donate'
 						bgClassName='bg-primary-500 hover:bg-primary-600'
-						className='hidden text-gray-100 lg:block lg:ml-0'
+						className='hidden text-gray-100 lg:ml-0 lg:block'
 					/>
 				)}
 			</ContainerLayout>

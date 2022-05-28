@@ -43,7 +43,7 @@ const InspirationPage = () => {
 					<Gallery />
 				</Element>
 
-				<Element as='section' name='impact' className='py-16'>
+				<Element as='section' name='impact' className='py-24'>
 					<Impact />
 				</Element>
 
