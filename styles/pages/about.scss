@@ -1,0 +1,18 @@
+.about {
+  &-vision {
+		.swiper { 
+		  &-button-next,
+			&-button-prev {
+        @apply h-10 w-10 lg:w-12 lg:h-12 lg:-mt-8;
+
+        img:first-child, &::after {
+          @apply hidden;
+        }        
+			}
+
+      &-button-next {
+        @apply right-6;
+      }
+    }
+	}
+}

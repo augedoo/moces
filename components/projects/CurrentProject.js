@@ -77,7 +77,7 @@ const CurrentProject = ({ project, containerWidth }) => {
 
 					{/* // ! max of 3 objectives */}
 					<ul className='pt-4 space-y-2'>
-						{objectives.map((obj, i) => (
+						{objectives.slice(0, 4).map((obj, i) => (
 							<li key={i} className='grid grid-cols-[10px,1fr] gap-4'>
 								<div className='w-4 h-4 bg-primary-500'></div>
 

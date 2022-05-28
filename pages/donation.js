@@ -1,7 +1,7 @@
-import React from 'react';
+import Head from 'next/head';
 
 import QuickDonation from '@/components/donation/QuickDonation';
-import DonationHeader from '@/components/donation/DonationHeader';
+import Header from '@/components/layout/Header';
 import Causes from '@/components/donation/Causes';
 import CurrentProject from '@/components/projects/CurrentProject';
 import DonationValues from '@/components/donation/DonationValues';
@@ -10,8 +10,19 @@ import projects from '@/assets/data/projects';
 const Donation = () => {
 	return (
 		<div className='donation'>
+			<Head>
+				<title>
+					Donation | MOCES - Humanitarian Support for the Elderly and the Sick
+				</title>
+			</Head>
+
 			<section>
-				<DonationHeader />
+				<Header
+					title='About Us'
+					imageSmall='https://unsplash.it/502'
+					imageLarge='https://unsplash.it/701'
+					description='General donations are used for organizational upkeep. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam animi qui laudantium fugiat at rem facere maiores atque'
+				/>
 			</section>
 
 			{/* Fast donation for mobile */}

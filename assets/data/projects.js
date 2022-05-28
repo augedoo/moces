@@ -18,6 +18,7 @@ module.exports = [
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, officia.',
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, officia.',
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, officia.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, officia.',
 		],
 	},
 	{
@@ -36,6 +37,7 @@ module.exports = [
 		},
 		created_at: '4/04/2022',
 		objectives: [
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, officia.',
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, officia.',
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, officia.',
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, officia.',
@@ -60,6 +62,7 @@ module.exports = [
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, officia.',
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, officia.',
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, officia.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, officia.',
 		],
 	},
 	{
@@ -78,6 +81,7 @@ module.exports = [
 		},
 		created_at: '12/06/2022',
 		objectives: [
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, officia.',
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, officia.',
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, officia.',
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, officia.',

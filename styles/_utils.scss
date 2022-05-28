@@ -5,6 +5,9 @@
 }
 
 .heading {
+  &-1 {
+    @apply text-3xl font-black text-center capitalize text-secondary-700 lg:text-left;
+  }
   &-2 {
     @apply text-2xl font-black text-center capitalize text-secondary-700 lg:text-left;
   }

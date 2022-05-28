@@ -1,7 +1,10 @@
+import Head from 'next/head';
 import Link from 'next/link';
 import { CgArrowLongRight } from 'react-icons/cg';
-import ContainerLayout from '@/components/layout/ContainerLayout';
+import { Element } from 'react-scroll';
 
+import Header from '@/components/layout/Header';
+import ContainerLayout from '@/components/layout/ContainerLayout';
 import CurrentProject from '@/components/projects/CurrentProject';
 import Button from '@/components/ui/Button';
 import projects from '@/assets/data/projects';
@@ -46,8 +49,32 @@ const ProjectsPage = () => {
 
 	return (
 		<div className='mx-auto projects'>
+			<Head>
+				<title>
+					Projects | MOCES - Humanitarian Support for the Elderly and the Sick
+				</title>
+			</Head>
+
+			<section>
+				<Header
+					title='Projects'
+					imageSmall='https://unsplash.it/506'
+					imageLarge='https://unsplash.it/706'
+					nav={[
+						{
+							text: 'Current Projects',
+							sectionName: 'current-project',
+						},
+						{
+							text: 'Recent Projects',
+							sectionName: 'recent-projects',
+						},
+					]}
+				/>
+			</section>
+
 			{/* Current  Project */}
-			<div className='pt-12'>
+			<Element className='pt-12' as='section' name='current-project'>
 				<ContainerLayout className='mx-auto'>
 					<h1 className='section-header'>Current Projects</h1>
 
@@ -57,15 +84,17 @@ const ProjectsPage = () => {
 				</ContainerLayout>
 
 				<CurrentProject project={projects[0]} containerWidth />
-			</div>
+			</Element>
 
-			<ContainerLayout className='mx-auto mt-16'>
-				<h1 className='mb-10 section-header'>Recent Projects</h1>
-				{/* Projects */}
-				<div className='grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-8'>
-					{renderProjects(projects)}
-				</div>
-			</ContainerLayout>
+			<Element as='section' name='recent-projects'>
+				<ContainerLayout className='mx-auto mt-16'>
+					<h1 className='mb-10 section-header'>Recent Projects</h1>
+					{/* Projects */}
+					<div className='grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-8'>
+						{renderProjects(projects)}
+					</div>
+				</ContainerLayout>
+			</Element>
 		</div>
 	);
 };

@@ -84,11 +84,11 @@ const Inspiration = () => {
 
 				<div className='flex justify-center mt-10'>
 					<Button
-						url='#/inspiration'
+						url='/inspiration'
 						type='nextLink'
 						textContent='Get More Inspired'
 						bgClassName='bg-transparent'
-						className='text-sm text-center text-primary-500 border-primary-500 border-2 hover:text-secondary-500 hover:!border-secondary-500 transition duration-300 !py-4 !px-10'
+						className='border-2 border-primary-500 !py-4 !px-10 text-center text-sm text-primary-500 transition duration-300 hover:!border-secondary-500 hover:text-secondary-500'
 					/>
 				</div>
 			</ContainerLayout>
