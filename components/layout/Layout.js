@@ -69,12 +69,12 @@ const Layout = ({ children }) => {
 				}`}
 			>
 				{children}
-			</div>
 
-			<MainFooter
-				navLinks={navLinks}
-				showTop={pathname == '/contact' ? false : true}
-			/>
+				<MainFooter
+					navLinks={navLinks}
+					showTop={pathname == '/contact' ? false : true}
+				/>
+			</div>
 		</div>
 	);
 };
