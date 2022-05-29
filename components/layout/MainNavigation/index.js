@@ -21,26 +21,25 @@ const MainNavigation = ({ navLinks, isMenuShown, toggleMobileMenu }) => {
 				key={index}
 			>
 				<Link href={`${link.route}`}>
-					<a className='transform translate-y-1'>{link.text}</a>
+					<a className='translate-y-1 transform'>{link.text}</a>
 				</Link>
 			</li>
 		));
 
 	return (
-		<header className='header h-[95px] shadow'>
-			<ContainerLayout className='flex items-center h-full gap-4 mx-auto header__wrapper lg:justify-between'>
+		<header className='header h-[95px] w-full bg-white shadow'>
+			<ContainerLayout className='header__wrapper mx-auto flex h-full items-center gap-4 lg:justify-between'>
 				<Link href={'/'}>
 					<a className='block'>
-						<div className='flex items-center space-x-4 header__logo'>
-							<div className='w-12 h-12 bg-secondary-100'></div>
-							<h1 className='text-3xl font-bold tracking-wider uppercase text-secondary-700'>
+						<div className='header__logo flex items-center space-x-4'>
+							<div className='h-12 w-12 bg-secondary-100'></div>
+							<h1 className='text-3xl font-bold uppercase tracking-wider text-secondary-700'>
 								Moces
 							</h1>
 						</div>
 					</a>
 				</Link>
 
-				{/* // Todo: Fix positioning */}
 				{/* Mobile Side Menu Toggler */}
 				<Button
 					type='button'
@@ -64,8 +63,8 @@ const MainNavigation = ({ navLinks, isMenuShown, toggleMobileMenu }) => {
 				</Button>
 
 				{/* Desktop Nav Links */}
-				<div className='hidden h-full header__nav lg:block'>
-					<ul className='flex items-center h-full space-x-4 text-sm font-bold uppercase'>
+				<div className='header__nav hidden h-full lg:block'>
+					<ul className='flex h-full items-center space-x-4 text-sm font-bold uppercase'>
 						{renderNavLinks(navLinks)}
 					</ul>
 				</div>
