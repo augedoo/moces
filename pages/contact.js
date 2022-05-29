@@ -3,8 +3,10 @@ import React, { Fragment } from 'react';
 import { Element } from 'react-scroll';
 import Header from '@/components/layout/Header';
 import Location from '@/components/contact/Location';
-import FormInfo from '@/components/contact/FormInfo';
+import Info from '@/components/contact/Info';
+import Form from '@/components/contact/Form';
 import SocialMedia from '@/components/contact/SocialMedia';
+import ContainerLayout from '@/components/layout/ContainerLayout';
 
 const ContactPage = () => {
 	return (
@@ -39,7 +41,14 @@ const ContactPage = () => {
 				</section>
 
 				<Element as='section' name='form-info' className='pt-16'>
-					<FormInfo />
+					<ContainerLayout>
+						<h1 className='section-header mb-6 lg:mb-10'>Contact Form</h1>
+
+						<div className='grid gap-8 lg:grid-cols-2 xl:gap-12 2xl:gap-14'>
+							<Form />
+							<Info />
+						</div>
+					</ContainerLayout>
 				</Element>
 
 				<Element as='section' name='social-media' className='py-24'>

@@ -21,6 +21,34 @@
   }
 }
 
+
+
+.form {
+	&-group {
+		@apply py-2;
+
+		label {
+			@apply block mb-2 leading-7 text-base;
+		}
+
+		input,
+		select,
+		textarea {
+			@apply outline-none px-5 border text-white p-3 block w-full border-secondary-700 focus:border-primary-500 text-lg font-light leading-8 transition-colors duration-200 ease-in-out placeholder:text-gray-400;
+		}
+
+    textarea {
+      @apply resize-none;
+    }
+
+		input[type='submit'] {
+			@apply text-white w-auto px-8;
+		}
+	}
+}
+
+
+
 // Tailwind container custom positioning classes
 .amt {
 	&-container {
