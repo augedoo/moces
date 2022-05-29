@@ -24,6 +24,7 @@ const Info = () => {
 					</ul>
 				</div>
 
+				{/* Separator */}
 				<div className='mx-8 hidden h-40 w-[1px] bg-gradient-to-b from-transparent via-primary-500 to-transparent lg:block'></div>
 
 				<div className='flex-1'>

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import SimpleReactLightbox from 'simple-react-lightbox';
 
 import 'swiper/css/bundle';
@@ -37,12 +38,15 @@ const navLinks = [
 function MyApp({ Component, pageProps }) {
 	const [isMenuShown, setMenuShown] = useState(false);
 
+	const { pathname } = useRouter();
+
 	// Open/Close the mobile navigation
 	const toggleMobileMenu = (e) => {
 		setMenuShown((prevState) => !prevState);
 		e.stopPropagation();
 	};
 
+	console.log(pathname);
 	return (
 		<SimpleReactLightbox>
 			<div className='display'>
@@ -66,7 +70,10 @@ function MyApp({ Component, pageProps }) {
 					<Component {...pageProps} />
 				</div>
 
-				<MainFooter navLinks={navLinks} />
+				<MainFooter
+					navLinks={navLinks}
+					showTop={pathname == '/contact' ? false : true}
+				/>
 			</div>
 		</SimpleReactLightbox>
 	);

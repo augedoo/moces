@@ -55,7 +55,7 @@ const ContactPage = () => {
 					<SocialMedia />
 				</Element>
 
-				<Element as='section' name='our-location' className='pb-16'>
+				<Element as='section' name='our-location' className='lg:pb-16'>
 					<Location />
 				</Element>
 			</div>
